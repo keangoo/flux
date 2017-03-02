@@ -1,0 +1,45 @@
+{
+  "name": "crud-react",
+  "version": "0.0.1",
+  "description": "CRUD demo",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "scripts": {
+    "start": "npm run build && serve .",
+    "build": "npm run build-js && npm run build-css",
+    "build-js": "gulp build-js",
+    "build-css": "echo \"build CSS: TODO\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "events": "~1.1.0",
+    "flux": "~2.1.1",
+    "griddle-react": "~0.3.1",
+    "gulp": "~3.9.0",
+    "gulp-clean": "~0.3.1",
+    "gulp-jsmin": "~0.1.5",
+    "gulp-rename": "~1.2.2",
+    "history": "^1.17.0",
+    "react": "~0.14.6",
+    "react-addons-linked-state-mixin": "~0.14.6",
+    "react-dom": "~0.14.6",
+    "react-link": "^1.0.3",
+    "react-mixin": "~3.0.3",
+    "react-router": "~1.0.1",
+    "reqwest": "~2.0.5",
+    "when": "~3.7.5"
+  },
+  "author": "SEPTENI-TECHNOLOGY",
+  "license": "SEPTENI",
+  "devDependencies": {
+    "babelify": "^6.1.0",
+    "browser-sync": "^2.1.6",
+    "browserify": "^8.0.3",
+    "vinyl-source-stream": "~1.1.0",
+    "serve": "~1.4.0"
+  }
+}
