@@ -20,5 +20,11 @@ export default {
             actionType: 'DELETE_USER',
             deleteUserKey: key
         });
+    },
+    receiveUser: (data) => {
+        Dispatcher.dispatch({
+            actionType: 'RECEIVE_DATA',
+            data: data
+        });
     }
 }

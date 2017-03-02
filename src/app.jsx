@@ -4,8 +4,12 @@ import {Router, Route, Redirect} from "react-router";
 import createBrowserHistory from "history/lib/createBrowserHistory";
 import EditUser from "./components/EditUserComponent.jsx";
 import ListUser from "./components/ListUserComponent.jsx";
+import UserAPI from './utils/UserAPI.js';
+import UserData from './UserData.js';
 
 let history = createBrowserHistory();
+
+UserData.init();
 
 var routes = (
 	<Route>

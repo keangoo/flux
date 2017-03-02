@@ -3,10 +3,12 @@ import CreateUser from './CreateUserComponent.jsx';
 import userAction from '../actions/UserAction.jsx';
 import UserStore from '../stores/UserStore.jsx';
 import {Link} from 'react-router';
+import UserAPI from '../utils/UserAPI.js';
 
 export default class ListUserComponent extends React.Component {
 	constructor() {
 		super();
+		UserAPI.getUserData();
 		this.state = this._getState();
 		this._onChange = this._onChange.bind(this);
 	}
@@ -25,10 +27,12 @@ export default class ListUserComponent extends React.Component {
 
 	componentDidMount() {
 		UserStore.addChangeListener(this._onChange);
+		console.log('attach on change list');
 	}
 
-	componentWillMount() {
+	componentWillUnmount() {
 		UserStore.removeChangeListener(this._onChange);
+		console.log('remove on change list');
 	}
 
 	render() {

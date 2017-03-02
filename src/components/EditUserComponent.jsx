@@ -30,10 +30,12 @@ export default class EditUserComponent extends React.Component {
 		var id = this.props.params.id;
 		UserStore.isViewed(id);
 		UserStore.addChangeListener(this._onChange);
+		console.log('attach on change edit');
 	}
 
 	componentWillUnmount() {
 		UserStore.removeChangeListener(this._onChange);
+		console.log('remove on change edit');
 	}
 
 	render() {

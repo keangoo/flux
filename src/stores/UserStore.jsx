@@ -17,8 +17,8 @@ class UserStore extends BaseStore {
 	 	console.log("I see you!");
 	 	switch(action.actionType) {
 	 		case 'CREATE_USER':
-	 			this.listData[this.userIndex] = action.user;
-	 			this.userIndex = this.userIndex + 1;
+	 			this.listData[this.listData.length] = action.user;
+	 			this.userIndex = this.listData.length;
 	 			console.log(this.listData);
 	 			this.emitChange();
 	 			break;
@@ -32,6 +32,10 @@ class UserStore extends BaseStore {
                 this.listData[action.user.id] = editedUser;
                 this.emitChange();
                 break;
+            case 'RECEIVE_DATA':
+            	this.listData = action.data
+            	this.emitChange();
+            	break;
 	 		default:
 	 	}
 	 }
